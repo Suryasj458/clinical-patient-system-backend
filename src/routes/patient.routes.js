@@ -5,10 +5,12 @@ import {
   getPatient,
   listPatients,
   updatePatient,
+  exportPatientsExcel
 } from "../controllers/patient.controller.js";
 
 const router = Router();
 router.get("/", listPatients);
+router.get("/export/excel", exportPatientsExcel);
 router.get("/:id", getPatient);
 router.post("/", createPatient);
 router.put("/:id", updatePatient);
